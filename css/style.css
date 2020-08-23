@@ -1,0 +1,206 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    ul,
+    ol {
+        list-style-type: none;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    body {
+        background-color: #ddd;
+        min-width: 100vw;
+        min-height: 100vh;
+        display: inline-block;
+    }
+    
+    @media (min-width: 500px) {
+        body {
+            background-color: #eee;
+            background: url("../images/bg.jpg");
+            background-size: cover;
+        }
+    }
+    
+    .Julder-header {
+        margin: 20px;
+    }
+    
+    .searchForm {
+        display: flex;
+        justify-content: space-between;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    @media (min-width: 500px) {
+        .searchForm {
+            max-width: 520px;
+            margin: 60px auto;
+        }
+    }
+    
+    .searchForm>input {
+        width: 100%;
+        height: 40px;
+        margin-right: 10px;
+        border: 1px solid #0dc1e0;
+        padding: 0 10px;
+        outline: none;
+        border-radius: 4px;
+    }
+    
+    .searchForm>button {
+        white-space: nowrap;
+        padding: 0 28px;
+        border: none;
+        border: 1px solid #0dc1e0;
+        outline: none;
+        border-radius: 4px;
+        background: #0dc1e0;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    /* 主体部分 */
+    
+    .Julder-main {
+        opacity: .8;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .mainList {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        justify-content: space-between;
+    }
+    
+    @media (min-width: 500px) {
+        .mainList {
+            margin-left: 0;
+            margin-right: -25px;
+            justify-content: flex-start;
+        }
+        .mainList>li {
+            margin-right: 25px;
+        }
+    }
+    
+    .mainList>li {
+        margin-bottom: 18px;
+        cursor: pointer;
+    }
+    
+    .mainList .site {
+        border: 1px solid #ddd;
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        border-radius: 4px;
+        padding: 20px 0;
+        position: relative;
+    }
+    
+    .mainList .site>.logo {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 64px;
+    }
+    
+    .mainList .site>.link {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    
+    .mainList .site>.tip {
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .mainList .site .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        opacity: 0.6;
+    }
+    
+    @media (min-width: 500px) {
+        .mainList .site .close {
+            display: none;
+        }
+        .mainList .site:hover>.close {
+            display: block;
+            opacity: 0.6;
+        }
+    }
+    
+    .mainList .close .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .mainList .close .icon:hover {
+        background: #ccc;
+    }
+    
+    .mainList .addButton {
+        border: 1px solid #ddd;
+        background-color: white;
+        width: 160px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .mainList .addButton .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 9.4px 0;
+    }
+    
+    .mainList .addButton .icon {
+        width: 56px;
+        height: 56px;
+    }
+    
+    .mainList .addButton .text {
+        font-size: 14px;
+        margin-top: 4px;
+    }
