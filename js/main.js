@@ -100,14 +100,30 @@ window.onbeforeunload = () => {
     localStorage.setItem("slocal", string);
 };
 
+// 设置开关 防止输入框聚焦过程中输入对应字母跳转
+let flag = false;
+$('Input').on('focus', () => {
+    flag = true
+    console.log(flag);
+})
+$('Input').on('blur', () => {
+    flag = false
+    console.log(flag);
+})
+
+
 // 当有按键被按下后触发
 $(document).on("keypress", (e) => {
     // 对象解构 把右边得到的事件结果对象的key属性解构出来使用，相当于我要什么就解构什么
     const { key } = e;
-    for (let i = 0; i < hashMap.length; i++) {
-        if (hashMap[i].logo.toLocaleLowerCase() == key) {
-            window.open(hashMap[i].url);
-            break;
+    flag = false
+    if (flag == false) {
+        for (let i = 0; i < hashMap.length; i++) {
+            if (hashMap[i].logo.toLocaleLowerCase() == key) {
+                window.open(hashMap[i].url);
+                flag = true;
+                break;
+            }
         }
     }
 });
