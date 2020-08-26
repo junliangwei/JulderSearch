@@ -120,7 +120,7 @@ $(document).on("keypress", (e) => {
         for (let i = 0; i < hashMap.length; i++) {
             if (hashMap[i].logo.toLocaleLowerCase() == key) {
                 window.open(hashMap[i].url);
-                flag = true;
+                flag = false
                 break;
             }
         }
